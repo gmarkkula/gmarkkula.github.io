@@ -41,13 +41,13 @@
     </item>
     
     <item>
-      <title>Model of visuo-vestibular sensory integration in steering control</title>
-      <link>https://gmarkkula.github.io/posts/2019-visuo-vestibular-steering/</link>
+      <title>Model of visual-vestibular sensory integration in steering control</title>
+      <link>https://gmarkkula.github.io/posts/2019-visual-vestibular-steering/</link>
       <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://gmarkkula.github.io/posts/2019-visuo-vestibular-steering/</guid>
+      <guid>https://gmarkkula.github.io/posts/2019-visual-vestibular-steering/</guid>
       <description>&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/K6WCP&#34;&gt;https://doi.org/10.17605/OSF.IO/K6WCP&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;An extension of the task-general model of intermittent sensorimotor control (implementation linked &lt;a href=&#34;https://gmarkkula.github.io/posts/2018-biolcyb-model/&#34;&gt;here&lt;/a&gt;) to visuo-vestibular sensory integration in car steering, including &amp;ldquo;optimal cue&amp;rdquo; reweighting of the integration in response to downscaled vestibular cues, such as for example in a driving simulator. As proposed in (&lt;a href=&#34;https://doi.org/10.1016/j.trf.2019.07.018&#34;&gt;Markkula et al., 2019&lt;/a&gt;). The key script is &lt;code&gt;RunSimulateSlalom.m&lt;/code&gt;, as called by &lt;code&gt;do_SimulateSlalom.m&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;An extension of the task-general model of intermittent sensorimotor control (implementation linked &lt;a href=&#34;https://gmarkkula.github.io/posts/2018-biolcyb-model/&#34;&gt;here&lt;/a&gt;) to visual-vestibular sensory integration in car steering, including &amp;ldquo;optimal cue&amp;rdquo; reweighting of the integration, and other hypothesised behavioural adaptation mechanisms in response to downscaled vestibular cues, such as for example in a driving simulator. As proposed in (&lt;a href=&#34;https://doi.org/10.1016/j.trf.2019.07.018&#34;&gt;Markkula et al., 2019&lt;/a&gt;). The key script is &lt;code&gt;RunSimulateSlalom.m&lt;/code&gt;, as called by &lt;code&gt;do_SimulateSlalom.m&lt;/code&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Markkula, G., Romano, R., Waldram, R., Giles, O., Mole, C., &amp;amp; Wilkie, R. (2019). Modelling visual-vestibular integration and behavioural adaptation in the driving simulator. &lt;em&gt;Transportation Research Part F: Traffic Psychology and Behaviour&lt;/em&gt;, 66, 310–323. &lt;a href=&#34;https://doi.org/10.1016/j.trf.2019.07.018&#34;&gt;https://doi.org/10.1016/j.trf.2019.07.018&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -98,7 +98,7 @@
       
       <guid>https://gmarkkula.github.io/posts/2018-biolcyb-method/</guid>
       <description>&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/DF9PW&#34;&gt;https://doi.org/10.17605/OSF.IO/DF9PW&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;MATLAB implementation of the method for extracting discrete control adjustments proposed in (&lt;a href=&#34;https://doi.org/10.1007/s00422-017-0743-9&#34;&gt;Markkula et al., 2018&lt;/a&gt;). See &lt;code&gt;InterpretAsEffortLimitedIntermittentControl.m&lt;/code&gt;, used in &lt;code&gt;do__B_InterpretAsIntermittentControl.m&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;MATLAB implementation of the method for extracting discrete control adjustments from a continuous control signal, proposed in (&lt;a href=&#34;https://doi.org/10.1007/s00422-017-0743-9&#34;&gt;Markkula et al., 2018&lt;/a&gt;). See &lt;code&gt;InterpretAsEffortLimitedIntermittentControl.m&lt;/code&gt;, used in &lt;code&gt;do__B_InterpretAsIntermittentControl.m&lt;/code&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Markkula, G., Boer, E., Romano, R., &amp;amp; Merat, N. (2018). Sustained sensorimotor control as intermittent decisions about prediction errors: Computational framework and application to ground vehicle steering. &lt;em&gt;Biological Cybernetics&lt;/em&gt;, 112(3), 181–207. &lt;a href=&#34;https://doi.org/10.1007/s00422-017-0743-9&#34;&gt;https://doi.org/10.1007/s00422-017-0743-9&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;

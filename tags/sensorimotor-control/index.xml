@@ -32,7 +32,7 @@
       
       <guid>https://gmarkkula.github.io/posts/2018-biolcyb-method/</guid>
       <description>&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/DF9PW&#34;&gt;https://doi.org/10.17605/OSF.IO/DF9PW&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;MATLAB implementation of the method for extracting discrete control adjustments proposed in (&lt;a href=&#34;https://doi.org/10.1007/s00422-017-0743-9&#34;&gt;Markkula et al., 2018&lt;/a&gt;). See &lt;code&gt;InterpretAsEffortLimitedIntermittentControl.m&lt;/code&gt;, used in &lt;code&gt;do__B_InterpretAsIntermittentControl.m&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;MATLAB implementation of the method for extracting discrete control adjustments from a continuous control signal, proposed in (&lt;a href=&#34;https://doi.org/10.1007/s00422-017-0743-9&#34;&gt;Markkula et al., 2018&lt;/a&gt;). See &lt;code&gt;InterpretAsEffortLimitedIntermittentControl.m&lt;/code&gt;, used in &lt;code&gt;do__B_InterpretAsIntermittentControl.m&lt;/code&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Markkula, G., Boer, E., Romano, R., &amp;amp; Merat, N. (2018). Sustained sensorimotor control as intermittent decisions about prediction errors: Computational framework and application to ground vehicle steering. &lt;em&gt;Biological Cybernetics&lt;/em&gt;, 112(3), 181–207. &lt;a href=&#34;https://doi.org/10.1007/s00422-017-0743-9&#34;&gt;https://doi.org/10.1007/s00422-017-0743-9&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;

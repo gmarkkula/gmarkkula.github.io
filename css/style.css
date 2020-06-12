@@ -155,14 +155,16 @@ blockquote {
 }
 
 p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #cccccc;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 ul ol, ol ol, ul ul {
@@ -193,7 +195,7 @@ header nav {
     margin-top: 1em;
     max-width: 100%;
     text-align: right;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 header nav a {
@@ -211,7 +213,7 @@ header a {
 
 /* Pages */
 main h1 {
-    margin-top: 1em;
+    margin-top: 0em;
     font-weight: normal;
     line-height: 1.1em;
     margin-bottom: 0.5em;
@@ -223,6 +225,14 @@ main h1 {
 }
 
 /* Articles */
+
+.prevnextnav a {
+    color: grey;
+}
+
+.prevnextnav a:hover {
+    border-bottom: 0;
+}
 
 .post-title.favorite::after {
     content: "★";
