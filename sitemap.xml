@@ -3,15 +3,131 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://gmarkkula.github.io/about/</loc>
+    <lastmod>2020-06-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://gmarkkula.github.io/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://gmarkkula.github.io/posts/2020-dual-accumulator/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/tags/code/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/tags/interaction/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/tags/model/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/posts/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/tags/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/posts/2019-interact-sim-sw/</loc>
+    <lastmod>2019-11-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/tags/tool/</loc>
+    <lastmod>2019-11-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/tags/data/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/posts/2019-virtual-sweden-data/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/posts/2019-visuo-vestibular-steering/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/tags/multisensory-integration/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/tags/steering/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/archives/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/tags/braking/</loc>
+    <lastmod>2019-03-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/posts/2019-brake-model-fitting/</loc>
+    <lastmod>2019-03-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/tags/sensorimotor-control/</loc>
+    <lastmod>2018-12-05T03:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/posts/2018-biolcyb-model/</loc>
+    <lastmod>2018-12-05T03:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/tags/method/</loc>
+    <lastmod>2018-12-05T02:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/posts/2018-biolcyb-method/</loc>
+    <lastmod>2018-12-05T02:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/posts/2018-biolcyb-data/</loc>
+    <lastmod>2018-12-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/posts/2015-swrr/</loc>
+    <lastmod>2015-06-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/__index/</loc>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/categories/</loc>
   </url>
   
 </urlset>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tool on Gustav Markkula&#39;s online resources</title>
+    <link>https://gmarkkula.github.io/tags/tool/</link>
+    <description>Gustav Markkula&#39;s online resources (tool)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+    <atom:link href="https://gmarkkula.github.io/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Models and simulation software for pedestrian and driver road-crossing decisions</title>
+      <link>https://gmarkkula.github.io/posts/2019-interact-sim-sw/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2019-interact-sim-sw/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/49AWH&#34;&gt;https://doi.org/10.17605/OSF.IO/49AWH&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MATLAB implementation of the models of road-crossing decisions of pedestrians and turning drivers, developed in the European &lt;a href=&#34;https://www.interact-roadautomation.eu/&#34;&gt;interACT project&lt;/a&gt; and described in (&lt;a href=&#34;https://www.interact-roadautomation.eu/wp-content/uploads/interACT_D2.2_Interaction_Models_190902_v1.0_website-3.pdf&#34;&gt;Dietrich et al., 2019&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;This also includes a standalone &amp;ldquo;simulation tool&amp;rdquo; with a GUI allowing investigations of how crossing decisions are affected by the behaviour of an approaching vehicle.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dietrich, A., Bengler, K., Markkula, G., Giles, O. T., Lee, Y. M., Pekkanen, J., Madigan, R., &amp;amp; Merat, N. (2019). &lt;em&gt;interACT Deliverable D.2.2: Final description of psychological models of human‐human and human‐automation interaction&lt;/em&gt;. &lt;a href=&#34;&#34;&gt;https://www.interact-roadautomation.eu/projects-deliverables/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Code for fitting a visual looming accumulation model of brake onset timing</title>
+      <link>https://gmarkkula.github.io/posts/2019-brake-model-fitting/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2019-brake-model-fitting/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/647SY&#34;&gt;https://doi.org/10.17605/OSF.IO/647SY&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MATLAB implementation of a brake response time model based on accumulation of visual looming information, as initially proposed in (&lt;a href=&#34;https://doi.org/10.1177/1541931214581185&#34;&gt;Markkula, 2014&lt;/a&gt;). The code also shows how to run a simple grid search to perform a maximum likelihood fitting of the model to observed brake response data, as done for example in (&lt;a href=&#34;https://doi.org/10.1049/iet-its.2017.0233&#34;&gt;Engström et al, 2018&lt;/a&gt;; &lt;a href=&#34;https://doi.org/10.1016/j.aap.2018.06.006&#34;&gt;Xue et al., 2018&lt;/a&gt;; &lt;a href=&#34;https://doi.org/10.1177/0018720819875347&#34;&gt;Piccinini et al., 2019&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Engström, J., Markkula, G., Xue, Q., &amp;amp; Merat, N. (2018). Simulating the effect of cognitive load on braking responses in lead vehicle braking scenarios. &lt;em&gt;IET Intelligent Transport Systems&lt;/em&gt;, 12(6), 427–433. &lt;a href=&#34;https://doi.org/10.1049/iet-its.2017.0233&#34;&gt;https://doi.org/10.1049/iet-its.2017.0233&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markkula, G. (2014). Modeling driver control behavior in both routine and near-accident driving. &lt;em&gt;P&lt;/em&gt;roceedings of the Human Factors and Ergonomics Society Annual Meeting*, 58(1), 879–883. &lt;a href=&#34;https://doi.org/10.1177/1541931214581185&#34;&gt;https://doi.org/10.1177/1541931214581185&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Piccinini, G. B., Lehtonen, E., Forcolin, F., Engström, J., Albers, D., Markkula, G., Lodin, J., &amp;amp; Sandin, J. (2019). How do drivers respond to silent automation failures? Driving simulator study and comparison of computational driver 2 braking models 3. &lt;em&gt;Human Factors&lt;/em&gt;. &lt;a href=&#34;https://doi.org/10.1177/0018720819875347&#34;&gt;https://doi.org/10.1177/0018720819875347&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Xue, Q., Markkula, G., Yan, X., &amp;amp; Merat, N. (2018). Using perceptual cues for brake response to a lead vehicle: Comparing threshold and accumulator models of visual looming. &lt;em&gt;Accident Analysis &amp;amp; Prevention&lt;/em&gt;, 118, 114–124. &lt;a href=&#34;https://doi.org/10.1016/j.aap.2018.06.006&#34;&gt;https://doi.org/10.1016/j.aap.2018.06.006&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,31 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gustav Markkula&#39;s online resources</title>
-    <link>https://gmarkkula.github.io/</link>
-    <description>Gustav Markkula&#39;s online resources</description>
+    <title>code on Gustav Markkula&#39;s online resources</title>
+    <link>https://gmarkkula.github.io/tags/code/</link>
+    <description>Gustav Markkula&#39;s online resources (code)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate>
     
-    <atom:link href="https://gmarkkula.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gmarkkula.github.io/tags/code/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>About</title>
-      <link>https://gmarkkula.github.io/about/</link>
-      <pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://gmarkkula.github.io/about/</guid>
-      <description>&lt;p&gt;For more info about me or my research, see for example my:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://environment.leeds.ac.uk/transport/staff/957/dr-gustav-markkula&#34;&gt;University of Leeds staff profile&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/markkula&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://scholar.google.se/citations?user=55G7VxoAAAAJ&amp;amp;hl=en&#34;&gt;Google Scholar&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If you have any questions, don&amp;rsquo;t hesitate to &lt;a href=&#34;mailto:g.markkula@leeds.ac.uk&#34;&gt;drop me an email&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>A variant of the dual accumulator model of strategic (game-theoretic) deliberation</title>
@@ -57,23 +41,6 @@
     </item>
     
     <item>
-      <title>Dataset: Driver control in real and simulated low-friction vehicle testing manoeuvres</title>
-      <link>https://gmarkkula.github.io/posts/2019-virtual-sweden-data/</link>
-      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://gmarkkula.github.io/posts/2019-virtual-sweden-data/</guid>
-      <description>&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/VA5KR&#34;&gt;https://doi.org/10.17605/OSF.IO/VA5KR&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Data collected with professional Jaguar Land Rover test drivers in three different low-friction vehicle testing manoeuvres, both in a real vehicle on a frozen lake, and in a high-fidelity reconstruction of the same tests in the University of Leeds moving-base driving simulator. Described and analysed in (&lt;a href=&#34;https://doi.org/10.1109/THMS.2018.2848998&#34;&gt;Markkula et al., 2018&lt;/a&gt;) and (&lt;a href=&#34;https://doi.org/10.1016/j.trf.2019.07.001&#34;&gt;Romano et al., 2019&lt;/a&gt;). The simulator data for one of the tests is also available in the dataset linked &lt;a href=&#34;https://gmarkkula.github.io/posts/2018-biolcyb-data/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Markkula, G., Romano, R., Jamson, A. H., Pariota, L., Bean, A., &amp;amp; Boer, E. R. (2018). Using driver control models to understand and evaluate behavioral validity of driving simulators. &lt;em&gt;IEEE Transactions on Human-Machine Systems&lt;/em&gt;, 48(6), 592–603. &lt;a href=&#34;https://doi.org/10.1109/THMS.2018.2848998&#34;&gt;https://doi.org/10.1109/THMS.2018.2848998&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Romano, R., Markkula, G., Boer, E., Jamson, H., Bean, A., Tomlinson, A., Horrobin, A., &amp;amp; Sadraei, E. (2019). An objective assessment of the utility of a driving simulator for low mu testing. &lt;em&gt;Transportation Research Part F: Traffic Psychology and Behaviour&lt;/em&gt;, 65, 34–45. &lt;a href=&#34;https://doi.org/10.1016/j.trf.2019.07.001&#34;&gt;https://doi.org/10.1016/j.trf.2019.07.001&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Model of visuo-vestibular sensory integration in steering control</title>
       <link>https://gmarkkula.github.io/posts/2019-visuo-vestibular-steering/</link>
       <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
@@ -84,16 +51,6 @@
 &lt;blockquote&gt;
 &lt;p&gt;Markkula, G., Romano, R., Waldram, R., Giles, O., Mole, C., &amp;amp; Wilkie, R. (2019). Modelling visual-vestibular integration and behavioural adaptation in the driving simulator. &lt;em&gt;Transportation Research Part F: Traffic Psychology and Behaviour&lt;/em&gt;, 66, 310–323. &lt;a href=&#34;https://doi.org/10.1016/j.trf.2019.07.018&#34;&gt;https://doi.org/10.1016/j.trf.2019.07.018&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://gmarkkula.github.io/archives/</link>
-      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://gmarkkula.github.io/archives/</guid>
-      <description>&lt;p&gt;asdf&lt;/p&gt;
 </description>
     </item>
     
@@ -149,20 +106,6 @@
     </item>
     
     <item>
-      <title>Dataset: Human steering control in straight lane-keeping and at-limit steering tasks</title>
-      <link>https://gmarkkula.github.io/posts/2018-biolcyb-data/</link>
-      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://gmarkkula.github.io/posts/2018-biolcyb-data/</guid>
-      <description>&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/DF9PW&#34;&gt;https://doi.org/10.17605/OSF.IO/DF9PW&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Data from two experiments in the University of Leeds moving-base car driving simulator, as described in (&lt;a href=&#34;https://doi.org/10.1007/s00422-017-0743-9&#34;&gt;Markkula et al., 2018&lt;/a&gt;): (1) simple lane-keeping on a straight road, (2) at-limit vehicle control on a circular curve track on ice. The latter data is also included in the dataset linked &lt;a href=&#34;https://gmarkkula.github.io/posts/2019-virtual-sweden-data/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Markkula, G., Boer, E., Romano, R., &amp;amp; Merat, N. (2018). Sustained sensorimotor control as intermittent decisions about prediction errors: Computational framework and application to ground vehicle steering. &lt;em&gt;Biological Cybernetics&lt;/em&gt;, 112(3), 181–207. &lt;a href=&#34;https://doi.org/10.1007/s00422-017-0743-9&#34;&gt;https://doi.org/10.1007/s00422-017-0743-9&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Steering wheel reversal rate metric implementation</title>
       <link>https://gmarkkula.github.io/posts/2015-swrr/</link>
       <pubDate>Tue, 30 Jun 2015 00:00:00 +0000</pubDate>
@@ -176,29 +119,6 @@
 &lt;blockquote&gt;
 &lt;p&gt;Society of Automotive Engineers. (2015). &lt;em&gt;Operational definitions of driving performance measures and statistics&lt;/em&gt; (Recommended Practice J2944_201506). Society of Automotive Engineers Warrendale, PA. &lt;a href=&#34;https://www.sae.org/standards/content/j2944_201506/&#34;&gt;https://www.sae.org/standards/content/j2944_201506/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://gmarkkula.github.io/__index/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://gmarkkula.github.io/__index/</guid>
-      <description>&lt;p&gt;Just a collection of links to various potentially useful resources related to my research, otherwise scattered over the internet:&lt;/p&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Task-general modelling framework for intermittent sensorimotor control&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/DF9PW&#34;&gt;https://doi.org/10.17605/OSF.IO/DF9PW&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;MATLAB implementation of the modelling framework proposed in &lt;a href=&#34;https://doi.org/10.1007/s00422-017-0743-9&#34;&gt;this paper&lt;/a&gt;. See &lt;code&gt;DoControlModelTimeStep.m&lt;/code&gt;, used in &lt;code&gt;do_fig4_MinimalExample.m&lt;/code&gt; and &lt;code&gt;do__G_SimulateLaneKeepingModel.m&lt;/code&gt; (via &lt;code&gt;RunLaneKeepingSimulation.m&lt;/code&gt;).&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;Method for extracting control (e.g., steering) adjustments from a continuous signal&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/DF9PW&#34;&gt;https://doi.org/10.17605/OSF.IO/DF9PW&lt;/a&gt; (same as above)&lt;/p&gt;
-&lt;p&gt;MATLAB implementation of the method proposed in the same paper just mentioned above. See &lt;code&gt;InterpretAsEffortLimitedIntermittentControl.m&lt;/code&gt;, used in &lt;code&gt;do__B_InterpretAsIntermittentControl.m&lt;/code&gt;.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;The dual accumulator model of strategic (game-theoretic) deliberation&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Link: &lt;a href=&#34;https://github.com/gmarkkula/GolmanEtAlTypeModel&#34;&gt;https://github.com/gmarkkula/GolmanEtAlTypeModel&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Python (Jupyter Notebook) implementation of a variant of the &amp;ldquo;dual accumulator&amp;rdquo; model of human-like game-theoretic decision making, as proposed by Golman and colleagues in &lt;a href=&#34;https://doi.org/10.1037/rev0000176&#34;&gt;this paper&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

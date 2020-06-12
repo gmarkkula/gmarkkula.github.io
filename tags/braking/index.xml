@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>braking on Gustav Markkula&#39;s online resources</title>
+    <link>https://gmarkkula.github.io/tags/braking/</link>
+    <description>Gustav Markkula&#39;s online resources (braking)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+    <atom:link href="https://gmarkkula.github.io/tags/braking/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Code for fitting a visual looming accumulation model of brake onset timing</title>
+      <link>https://gmarkkula.github.io/posts/2019-brake-model-fitting/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2019-brake-model-fitting/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/647SY&#34;&gt;https://doi.org/10.17605/OSF.IO/647SY&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MATLAB implementation of a brake response time model based on accumulation of visual looming information, as initially proposed in (&lt;a href=&#34;https://doi.org/10.1177/1541931214581185&#34;&gt;Markkula, 2014&lt;/a&gt;). The code also shows how to run a simple grid search to perform a maximum likelihood fitting of the model to observed brake response data, as done for example in (&lt;a href=&#34;https://doi.org/10.1049/iet-its.2017.0233&#34;&gt;Engström et al, 2018&lt;/a&gt;; &lt;a href=&#34;https://doi.org/10.1016/j.aap.2018.06.006&#34;&gt;Xue et al., 2018&lt;/a&gt;; &lt;a href=&#34;https://doi.org/10.1177/0018720819875347&#34;&gt;Piccinini et al., 2019&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Engström, J., Markkula, G., Xue, Q., &amp;amp; Merat, N. (2018). Simulating the effect of cognitive load on braking responses in lead vehicle braking scenarios. &lt;em&gt;IET Intelligent Transport Systems&lt;/em&gt;, 12(6), 427–433. &lt;a href=&#34;https://doi.org/10.1049/iet-its.2017.0233&#34;&gt;https://doi.org/10.1049/iet-its.2017.0233&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markkula, G. (2014). Modeling driver control behavior in both routine and near-accident driving. &lt;em&gt;P&lt;/em&gt;roceedings of the Human Factors and Ergonomics Society Annual Meeting*, 58(1), 879–883. &lt;a href=&#34;https://doi.org/10.1177/1541931214581185&#34;&gt;https://doi.org/10.1177/1541931214581185&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Piccinini, G. B., Lehtonen, E., Forcolin, F., Engström, J., Albers, D., Markkula, G., Lodin, J., &amp;amp; Sandin, J. (2019). How do drivers respond to silent automation failures? Driving simulator study and comparison of computational driver 2 braking models 3. &lt;em&gt;Human Factors&lt;/em&gt;. &lt;a href=&#34;https://doi.org/10.1177/0018720819875347&#34;&gt;https://doi.org/10.1177/0018720819875347&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Xue, Q., Markkula, G., Yan, X., &amp;amp; Merat, N. (2018). Using perceptual cues for brake response to a lead vehicle: Comparing threshold and accumulator models of visual looming. &lt;em&gt;Accident Analysis &amp;amp; Prevention&lt;/em&gt;, 118, 114–124. &lt;a href=&#34;https://doi.org/10.1016/j.aap.2018.06.006&#34;&gt;https://doi.org/10.1016/j.aap.2018.06.006&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

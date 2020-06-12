@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>interaction on Gustav Markkula&#39;s online resources</title>
+    <link>https://gmarkkula.github.io/tags/interaction/</link>
+    <description>Gustav Markkula&#39;s online resources (interaction)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate>
+    
+    <atom:link href="https://gmarkkula.github.io/tags/interaction/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A variant of the dual accumulator model of strategic (game-theoretic) deliberation</title>
+      <link>https://gmarkkula.github.io/posts/2020-dual-accumulator/</link>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2020-dual-accumulator/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://github.com/gmarkkula/GolmanEtAlTypeModel&#34;&gt;https://github.com/gmarkkula/GolmanEtAlTypeModel&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A Python (Jupyter Notebook) implementation of a variant of the &amp;ldquo;dual accumulator&amp;rdquo; model of human-like game-theoretic decision making, as proposed by Golman et al. (&lt;a href=&#34;https://doi.org/10.1037/rev0000176&#34;&gt;2019&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Golman, R., Bhatia, S., &amp;amp; Kane, P. B. (2019). The dual accumulator model of strategic deliberation and decision making. &lt;em&gt;Psychological Review&lt;/em&gt;. &lt;a href=&#34;&#34;&gt;https://doi.org/10.1037/rev0000176&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Models and simulation software for pedestrian and driver road-crossing decisions</title>
+      <link>https://gmarkkula.github.io/posts/2019-interact-sim-sw/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2019-interact-sim-sw/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/49AWH&#34;&gt;https://doi.org/10.17605/OSF.IO/49AWH&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MATLAB implementation of the models of road-crossing decisions of pedestrians and turning drivers, developed in the European &lt;a href=&#34;https://www.interact-roadautomation.eu/&#34;&gt;interACT project&lt;/a&gt; and described in (&lt;a href=&#34;https://www.interact-roadautomation.eu/wp-content/uploads/interACT_D2.2_Interaction_Models_190902_v1.0_website-3.pdf&#34;&gt;Dietrich et al., 2019&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;This also includes a standalone &amp;ldquo;simulation tool&amp;rdquo; with a GUI allowing investigations of how crossing decisions are affected by the behaviour of an approaching vehicle.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dietrich, A., Bengler, K., Markkula, G., Giles, O. T., Lee, Y. M., Pekkanen, J., Madigan, R., &amp;amp; Merat, N. (2019). &lt;em&gt;interACT Deliverable D.2.2: Final description of psychological models of human‐human and human‐automation interaction&lt;/em&gt;. &lt;a href=&#34;&#34;&gt;https://www.interact-roadautomation.eu/projects-deliverables/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

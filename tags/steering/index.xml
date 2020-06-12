@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>steering on Gustav Markkula&#39;s online resources</title>
+    <link>https://gmarkkula.github.io/tags/steering/</link>
+    <description>Gustav Markkula&#39;s online resources (steering)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 24 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+    <atom:link href="https://gmarkkula.github.io/tags/steering/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dataset: Driver control in real and simulated low-friction vehicle testing manoeuvres</title>
+      <link>https://gmarkkula.github.io/posts/2019-virtual-sweden-data/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2019-virtual-sweden-data/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/VA5KR&#34;&gt;https://doi.org/10.17605/OSF.IO/VA5KR&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Data collected with professional Jaguar Land Rover test drivers in three different low-friction vehicle testing manoeuvres, both in a real vehicle on a frozen lake, and in a high-fidelity reconstruction of the same tests in the University of Leeds moving-base driving simulator. Described and analysed in (&lt;a href=&#34;https://doi.org/10.1109/THMS.2018.2848998&#34;&gt;Markkula et al., 2018&lt;/a&gt;) and (&lt;a href=&#34;https://doi.org/10.1016/j.trf.2019.07.001&#34;&gt;Romano et al., 2019&lt;/a&gt;). The simulator data for one of the tests is also available in the dataset linked &lt;a href=&#34;https://gmarkkula.github.io/posts/2018-biolcyb-data/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markkula, G., Romano, R., Jamson, A. H., Pariota, L., Bean, A., &amp;amp; Boer, E. R. (2018). Using driver control models to understand and evaluate behavioral validity of driving simulators. &lt;em&gt;IEEE Transactions on Human-Machine Systems&lt;/em&gt;, 48(6), 592–603. &lt;a href=&#34;https://doi.org/10.1109/THMS.2018.2848998&#34;&gt;https://doi.org/10.1109/THMS.2018.2848998&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Romano, R., Markkula, G., Boer, E., Jamson, H., Bean, A., Tomlinson, A., Horrobin, A., &amp;amp; Sadraei, E. (2019). An objective assessment of the utility of a driving simulator for low mu testing. &lt;em&gt;Transportation Research Part F: Traffic Psychology and Behaviour&lt;/em&gt;, 65, 34–45. &lt;a href=&#34;https://doi.org/10.1016/j.trf.2019.07.001&#34;&gt;https://doi.org/10.1016/j.trf.2019.07.001&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Model of visuo-vestibular sensory integration in steering control</title>
+      <link>https://gmarkkula.github.io/posts/2019-visuo-vestibular-steering/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2019-visuo-vestibular-steering/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/K6WCP&#34;&gt;https://doi.org/10.17605/OSF.IO/K6WCP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;An extension of the task-general model of intermittent sensorimotor control (implementation linked &lt;a href=&#34;https://gmarkkula.github.io/posts/2018-biolcyb-model/&#34;&gt;here&lt;/a&gt;) to visuo-vestibular sensory integration in car steering, including &amp;ldquo;optimal cue&amp;rdquo; reweighting of the integration in response to downscaled vestibular cues, such as for example in a driving simulator. As proposed in (&lt;a href=&#34;https://doi.org/10.1016/j.trf.2019.07.018&#34;&gt;Markkula et al., 2019&lt;/a&gt;). The key script is &lt;code&gt;RunSimulateSlalom.m&lt;/code&gt;, as called by &lt;code&gt;do_SimulateSlalom.m&lt;/code&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markkula, G., Romano, R., Waldram, R., Giles, O., Mole, C., &amp;amp; Wilkie, R. (2019). Modelling visual-vestibular integration and behavioural adaptation in the driving simulator. &lt;em&gt;Transportation Research Part F: Traffic Psychology and Behaviour&lt;/em&gt;, 66, 310–323. &lt;a href=&#34;https://doi.org/10.1016/j.trf.2019.07.018&#34;&gt;https://doi.org/10.1016/j.trf.2019.07.018&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Dataset: Human steering control in straight lane-keeping and at-limit steering tasks</title>
+      <link>https://gmarkkula.github.io/posts/2018-biolcyb-data/</link>
+      <pubDate>Wed, 05 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2018-biolcyb-data/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/DF9PW&#34;&gt;https://doi.org/10.17605/OSF.IO/DF9PW&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Data from two experiments in the University of Leeds moving-base car driving simulator, as described in (&lt;a href=&#34;https://doi.org/10.1007/s00422-017-0743-9&#34;&gt;Markkula et al., 2018&lt;/a&gt;): (1) simple lane-keeping on a straight road, (2) at-limit vehicle control on a circular curve track on ice. The latter data is also included in the dataset linked &lt;a href=&#34;https://gmarkkula.github.io/posts/2019-virtual-sweden-data/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markkula, G., Boer, E., Romano, R., &amp;amp; Merat, N. (2018). Sustained sensorimotor control as intermittent decisions about prediction errors: Computational framework and application to ground vehicle steering. &lt;em&gt;Biological Cybernetics&lt;/em&gt;, 112(3), 181–207. &lt;a href=&#34;https://doi.org/10.1007/s00422-017-0743-9&#34;&gt;https://doi.org/10.1007/s00422-017-0743-9&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Steering wheel reversal rate metric implementation</title>
+      <link>https://gmarkkula.github.io/posts/2015-swrr/</link>
+      <pubDate>Tue, 30 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2015-swrr/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://github.com/gmarkkula/SteeringWheelReversalRate&#34;&gt;https://github.com/gmarkkula/SteeringWheelReversalRate&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Implementation of the driver performance metric &amp;ldquo;steering wheel reversal rate&amp;rdquo;, as defined in (&lt;a href=&#34;http://eprints.whiterose.ac.uk/131534/&#34;&gt;Markkula and Engström, 2006&lt;/a&gt;). This method for defining and calculating the metric, including the exact code linked here, is also standardised by the Society of Automotive Engineers (&lt;a href=&#34;https://www.sae.org/standards/content/j2944_201506/&#34;&gt;SAE, 2015&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markkula, G., &amp;amp; Engström, J. (2006). A steering wheel reversal rate metric for assessing effects of visual and cognitive secondary task load. &lt;em&gt;Proceedings of the 13th ITS World Congress&lt;/em&gt;. &lt;a href=&#34;http://eprints.whiterose.ac.uk/131534/&#34;&gt;http://eprints.whiterose.ac.uk/131534/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Society of Automotive Engineers. (2015). &lt;em&gt;Operational definitions of driving performance measures and statistics&lt;/em&gt; (Recommended Practice J2944_201506). Society of Automotive Engineers Warrendale, PA. &lt;a href=&#34;https://www.sae.org/standards/content/j2944_201506/&#34;&gt;https://www.sae.org/standards/content/j2944_201506/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
