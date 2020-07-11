@@ -3,13 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://gmarkkula.github.io/about/</loc>
-    <lastmod>2020-06-07T00:00:00+00:00</lastmod>
+    <loc>https://gmarkkula.github.io/</loc>
+    <lastmod>2020-07-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gmarkkula.github.io/</loc>
-    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <loc>https://gmarkkula.github.io/posts/2020-hfes2014-model/</loc>
+    <lastmod>2020-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/tags/braking/</loc>
+    <lastmod>2020-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/tags/code/</loc>
+    <lastmod>2020-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/tags/model/</loc>
+    <lastmod>2020-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/posts/</loc>
+    <lastmod>2020-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/tags/</loc>
+    <lastmod>2020-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gmarkkula.github.io/about/</loc>
+    <lastmod>2020-06-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -18,27 +48,7 @@
   </url>
   
   <url>
-    <loc>https://gmarkkula.github.io/tags/code/</loc>
-    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gmarkkula.github.io/tags/interaction/</loc>
-    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gmarkkula.github.io/tags/model/</loc>
-    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gmarkkula.github.io/posts/</loc>
-    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gmarkkula.github.io/tags/</loc>
     <lastmod>2020-05-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -75,11 +85,6 @@
   <url>
     <loc>https://gmarkkula.github.io/tags/steering/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gmarkkula.github.io/tags/braking/</loc>
-    <lastmod>2019-03-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>

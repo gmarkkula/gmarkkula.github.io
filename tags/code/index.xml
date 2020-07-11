@@ -6,10 +6,30 @@
     <description>Gustav Markkula&#39;s online resources (code)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2020 00:00:00 +0000</lastBuildDate>
     
     <atom:link href="https://gmarkkula.github.io/tags/code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A looming accumulation intermittent control braking model</title>
+      <link>https://gmarkkula.github.io/posts/2020-hfes2014-model/</link>
+      <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2020-hfes2014-model/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://github.com/gmarkkula/HFES2014ModelsAndFigs&#34;&gt;https://github.com/gmarkkula/HFES2014ModelsAndFigs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A MATLAB implementation of the looming accumulation intermittent braking control model described in (&lt;a href=&#34;https://doi.org/10.1177/1541931214581185&#34;&gt;Markkula, 2014&lt;/a&gt;). This implementation is very similar to what has later been presented in more complete detail in (&lt;a href=&#34;https://doi.org/10.1177/1541931213601565&#34;&gt;Svärd et al., 2017&lt;/a&gt;) and as a more task-general model of sustained intermittent control in (&lt;a href=&#34;https://doi.org/10.1007/s00422-017-0743-9&#34;&gt;Markkula et al., 2018&lt;/a&gt;; code linked &lt;a href=&#34;https://gmarkkula.github.io/posts/2018-biolcyb-model/&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markkula, G. (2014). Modeling driver control behavior in both routine and near-accident driving. Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 58(1), 879–883. &lt;a href=&#34;https://doi.org/10.1177/1541931214581185&#34;&gt;https://doi.org/10.1177/1541931214581185&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markkula, G., Boer, E., Romano, R., &amp;amp; Merat, N. (2018). Sustained sensorimotor control as intermittent decisions about prediction errors: Computational framework and application to ground vehicle steering. Biological Cybernetics, 112(3), 181–207. &lt;a href=&#34;https://doi.org/10.1007/s00422-017-0743-9&#34;&gt;https://doi.org/10.1007/s00422-017-0743-9&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Svärd, M., Markkula, G., Engström, J., Granum, F., &amp;amp; Bärgman, J. (2017). A quantitative driver model of pre-crash brake onset and control. Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 61, 339–343. &lt;a href=&#34;https://doi.org/10.1177/1541931213601565&#34;&gt;https://doi.org/10.1177/1541931213601565&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
     
     <item>
       <title>A variant of the dual accumulator model of strategic (game-theoretic) deliberation</title>
