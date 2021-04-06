@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 
 
-<title>test</title>
+<title>rear_end_sim</title>
 
 <style type="text/css">
     /*!
@@ -13104,14 +13104,15 @@ div#notebook {
 
 
 
-  <div class="cell text_cell">
-    <button class="js-nbinteract-widget">
-      Loading widgets...
-    </button>
-  </div>
 
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p hidden>Just adding a bit of $\LaTeX$ - seems needed to make it render below...</p>
 
+</div>
+</div>
+</div>
 
   
 
@@ -13120,67 +13121,131 @@ div#notebook {
     <div class="input">
 
 <div class="inner_cell">
-    <div class="input_area">
+    <div hidden class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
-<span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">simulate</span> <span class="kn">import</span> <span class="n">run_simulation</span>
- 
+<span class="kn">import</span> <span class="nn">collision_driver_models</span> <span class="k">as</span> <span class="nn">cdm</span>
+<span class="kn">import</span> <span class="nn">importlib</span>
+<span class="n">importlib</span><span class="o">.</span><span class="n">reload</span><span class="p">(</span><span class="n">cdm</span><span class="p">)</span>
+
+<span class="n">NO_PRESET_STRING</span> <span class="o">=</span> <span class="s1">&#39;&lt;You can choose a parameter preset here&gt;&#39;</span>
+
+<span class="k">class</span> <span class="nc">ParametersWidget</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameterizable</span><span class="p">,</span> <span class="n">is_togglable</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">toggled_on</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameterizable</span> <span class="o">=</span> <span class="n">parameterizable</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_togglable</span> <span class="o">=</span> <span class="n">is_togglable</span>
+        <span class="c1"># header</span>
+        <span class="n">header_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;&lt;b&gt;&#39;</span> <span class="o">+</span> <span class="n">parameterizable</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;&lt;/b&gt;&#39;</span><span class="p">)</span>
+        <span class="n">display</span><span class="p">(</span><span class="n">header_widget</span><span class="p">)</span>
+        <span class="c1"># toggle</span>
+        <span class="k">if</span> <span class="n">is_togglable</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">toggle</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Checkbox</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="n">toggled_on</span><span class="p">,</span> <span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Enabled&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">toggle</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">description_width</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
+            <span class="n">display</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">toggle</span><span class="p">)</span>
+        <span class="c1"># parameters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">param_widgets</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">param_def</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">parameterizable</span><span class="o">.</span><span class="n">param_defs</span><span class="p">):</span>
+            <span class="n">param_val</span> <span class="o">=</span> <span class="n">parameterizable</span><span class="o">.</span><span class="n">param_vals</span><span class="p">[</span><span class="n">param_def</span><span class="o">.</span><span class="n">short_name</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">param_def</span><span class="o">.</span><span class="n">type</span> <span class="ow">is</span> <span class="n">cdm</span><span class="o">.</span><span class="n">ParameterType</span><span class="o">.</span><span class="n">BOOLEAN</span><span class="p">:</span>
+                <span class="n">param_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Checkbox</span><span class="p">(</span><span class="n">description</span> <span class="o">=</span> <span class="n">param_def</span><span class="o">.</span><span class="n">display_name</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">param_val</span><span class="p">)</span>
+                <span class="n">param_widget</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">description_width</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
+                <span class="n">display</span><span class="p">(</span><span class="n">param_widget</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">param_def</span><span class="o">.</span><span class="n">type</span> <span class="ow">is</span> <span class="n">cdm</span><span class="o">.</span><span class="n">ParameterType</span><span class="o">.</span><span class="n">COLOR</span><span class="p">:</span>
+                <span class="n">param_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">ColorPicker</span><span class="p">(</span><span class="n">description</span> <span class="o">=</span> <span class="n">param_def</span><span class="o">.</span><span class="n">display_name</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">param_val</span><span class="p">)</span>
+                <span class="n">display</span><span class="p">(</span><span class="n">param_widget</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">min_val</span> <span class="o">=</span> <span class="n">param_def</span><span class="o">.</span><span class="n">range</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="n">max_val</span> <span class="o">=</span> <span class="n">param_def</span><span class="o">.</span><span class="n">range</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="k">if</span> <span class="n">param_def</span><span class="o">.</span><span class="n">type</span> <span class="ow">is</span> <span class="n">cdm</span><span class="o">.</span><span class="n">ParameterType</span><span class="o">.</span><span class="n">FLOAT</span><span class="p">:</span>
+                    <span class="n">param_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">BoundedFloatText</span><span class="p">(</span><span class="nb">min</span> <span class="o">=</span> <span class="n">min_val</span><span class="p">,</span> <span class="nb">max</span> <span class="o">=</span> <span class="n">max_val</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">param_val</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">param_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">BoundedIntText</span><span class="p">(</span><span class="nb">min</span> <span class="o">=</span> <span class="n">min_val</span><span class="p">,</span> <span class="nb">max</span> <span class="o">=</span> <span class="n">max_val</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">param_val</span><span class="p">)</span>
+                <span class="n">hbox</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">param_def</span><span class="o">.</span><span class="n">display_name</span> <span class="o">+</span> <span class="s1">&#39; (&#39;</span> <span class="o">+</span> <span class="n">param_def</span><span class="o">.</span><span class="n">unit</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span><span class="p">),</span> 
+                                     <span class="n">param_widget</span><span class="p">])</span>
+                <span class="n">display</span><span class="p">(</span><span class="n">hbox</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">param_widgets</span><span class="p">[</span><span class="n">param_def</span><span class="o">.</span><span class="n">short_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">param_widget</span>
+        <span class="c1"># presets</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parameterizable</span><span class="o">.</span><span class="n">presets</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">drop_options</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">drop_options</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">NO_PRESET_STRING</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">preset</span> <span class="ow">in</span> <span class="n">parameterizable</span><span class="o">.</span><span class="n">presets</span><span class="p">:</span>
+                <span class="n">drop_options</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">preset</span><span class="o">.</span><span class="n">display_name</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">preset_widget</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span><span class="n">options</span> <span class="o">=</span> <span class="n">drop_options</span><span class="p">)</span>
+            <span class="n">display</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">preset_widget</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">preset_widget</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_preset_selected</span><span class="p">)</span>
     
-<span class="n">TIME_STEP</span> <span class="o">=</span> <span class="mf">0.1</span>
-<span class="n">END_TIME</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="k">def</span> <span class="nf">set_parameterizable_from_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">param_def</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">parameterizable</span><span class="o">.</span><span class="n">param_defs</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameterizable</span><span class="o">.</span><span class="n">param_vals</span><span class="p">[</span><span class="n">param_def</span><span class="o">.</span><span class="n">short_name</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">param_widgets</span><span class="p">[</span><span class="n">param_def</span><span class="o">.</span><span class="n">short_name</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+            
+    <span class="k">def</span> <span class="nf">set_widget_from_parameterizable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">param_def</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">parameterizable</span><span class="o">.</span><span class="n">param_defs</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">param_widgets</span><span class="p">[</span><span class="n">param_def</span><span class="o">.</span><span class="n">short_name</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">parameterizable</span><span class="o">.</span><span class="n">param_vals</span><span class="p">[</span><span class="n">param_def</span><span class="o">.</span><span class="n">short_name</span><span class="p">])</span>
+    
+    <span class="k">def</span> <span class="nf">on_preset_selected</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">change</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">preset_widget</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="n">NO_PRESET_STRING</span><span class="p">):</span>
+            <span class="c1"># make sure parameterizable is up to date with widget </span>
+            <span class="c1"># (since not all parameter are necessarily set by a preset)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_parameterizable_from_widget</span><span class="p">()</span>
+            <span class="c1"># apply the preset</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parameterizable</span><span class="o">.</span><span class="n">choose_preset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">preset_widget</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+            <span class="c1"># pull back parameter values to widget</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_widget_from_parameterizable</span><span class="p">()</span>
+            <span class="c1"># set the preset widgetback to the no-choice option</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">preset_widget</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">NO_PRESET_STRING</span>
+            
+            
 
-<span class="n">lv_speed_float_text</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
-<span class="n">lv_dot_float_text</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
-<span class="n">lv_dec_float_text</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
-<span class="n">lv_speed_hbox</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;LV speed (m/s)&#39;</span><span class="p">),</span> <span class="n">lv_speed_float_text</span><span class="p">])</span> 
-<span class="n">lv_dot_hbox</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;LV deceleration onset time (s)&#39;</span><span class="p">),</span> <span class="n">lv_dot_float_text</span><span class="p">])</span> 
-<span class="n">lv_dec_hbox</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;LV deceleration magnitude (m/s^3)&#39;</span><span class="p">),</span> <span class="n">lv_dec_float_text</span><span class="p">])</span>
+<span class="n">scenario</span> <span class="o">=</span> <span class="n">cdm</span><span class="o">.</span><span class="n">Scenario</span><span class="p">()</span>
+<span class="n">sim_engine</span> <span class="o">=</span> <span class="n">cdm</span><span class="o">.</span><span class="n">SimulationEngine</span><span class="p">(</span><span class="n">scenario</span><span class="p">)</span>
+<span class="n">sim_engine</span><span class="o">.</span><span class="n">param_vals</span><span class="p">[</span><span class="s1">&#39;end_time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">sim_engine</span><span class="o">.</span><span class="n">param_vals</span><span class="p">[</span><span class="s1">&#39;n_simulations&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">sim_engine</span><span class="o">.</span><span class="n">add_driver_model</span><span class="p">(</span><span class="n">cdm</span><span class="o">.</span><span class="n">FixedLDTModel</span><span class="p">())</span>
+<span class="n">sim_engine</span><span class="o">.</span><span class="n">add_driver_model</span><span class="p">(</span><span class="n">cdm</span><span class="o">.</span><span class="n">MaddoxAndKiefer2012Model</span><span class="p">())</span>
+<span class="n">sim_engine</span><span class="o">.</span><span class="n">add_driver_model</span><span class="p">(</span><span class="n">cdm</span><span class="o">.</span><span class="n">MarkkulaEtAl2016Model</span><span class="p">())</span>
 
-<span class="n">lv_min_speed_check</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Checkbox</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Stop deceleration&#39;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
+<span class="n">params_widgets</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">driver_model_widgets</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">params_widgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ParametersWidget</span><span class="p">(</span><span class="n">scenario</span><span class="p">,</span> <span class="n">is_togglable</span> <span class="o">=</span> <span class="kc">False</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">driver_model</span> <span class="ow">in</span> <span class="n">sim_engine</span><span class="o">.</span><span class="n">driver_models</span><span class="p">:</span>
+    <span class="n">driver_model_widget</span> <span class="o">=</span> <span class="n">ParametersWidget</span><span class="p">(</span><span class="n">driver_model</span><span class="p">,</span> <span class="n">is_togglable</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">params_widgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">driver_model_widget</span><span class="p">)</span>
+    <span class="n">driver_model_widgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">driver_model_widget</span><span class="p">)</span>
+<span class="n">params_widgets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ParametersWidget</span><span class="p">(</span><span class="n">sim_engine</span><span class="p">,</span> <span class="n">is_togglable</span> <span class="o">=</span> <span class="kc">False</span><span class="p">))</span>
 
-<span class="n">lv_min_speed_float_text</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">()</span>
-<span class="n">lv_min_speed_hbox</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="s1">&#39;LV min speed (m/s)&#39;</span><span class="p">),</span> <span class="n">lv_min_speed_float_text</span><span class="p">])</span> 
-
-<span class="n">simulate_button</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Simulate&#39;</span><span class="p">)</span>
 <span class="n">output</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
 
-
-    
-<span class="k">def</span> <span class="nf">on_sim_btn_clicked</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">on_run_btn_clicked</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+    <span class="c1"># set parameter values</span>
+    <span class="k">for</span> <span class="n">params_widget</span> <span class="ow">in</span> <span class="n">params_widgets</span><span class="p">:</span>
+        <span class="n">params_widget</span><span class="o">.</span><span class="n">set_parameterizable_from_widget</span><span class="p">()</span>
+    <span class="c1"># specify driver models to include</span>
+    <span class="n">sim_engine</span><span class="o">.</span><span class="n">clear_driver_models</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">driver_model_widget</span> <span class="ow">in</span> <span class="n">driver_model_widgets</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">driver_model_widget</span><span class="o">.</span><span class="n">toggle</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+            <span class="n">sim_engine</span><span class="o">.</span><span class="n">add_driver_model</span><span class="p">(</span><span class="n">driver_model_widget</span><span class="o">.</span><span class="n">parameterizable</span><span class="p">)</span>
+    <span class="c1"># run simulations </span>
+    <span class="n">run_button</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Running/plotting...&#39;</span>
+    <span class="n">run_button</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="n">output</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
     <span class="k">with</span> <span class="n">output</span><span class="p">:</span>
-        <span class="n">lv_speed</span> <span class="o">=</span> <span class="n">lv_speed_float_text</span><span class="o">.</span><span class="n">value</span>
-        <span class="n">lv_dot</span> <span class="o">=</span> <span class="n">lv_dot_float_text</span><span class="o">.</span><span class="n">value</span>
-        <span class="n">lv_dec</span> <span class="o">=</span> <span class="n">lv_dec_float_text</span><span class="o">.</span><span class="n">value</span>
-        <span class="n">limit_lv_speed</span> <span class="o">=</span> <span class="n">lv_min_speed_check</span><span class="o">.</span><span class="n">value</span>
-        <span class="n">lv_min_speed</span> <span class="o">=</span> <span class="n">lv_min_speed_float_text</span><span class="o">.</span><span class="n">value</span>
-        <span class="p">(</span><span class="n">time_stamp</span><span class="p">,</span> <span class="n">speed</span><span class="p">)</span> <span class="o">=</span> <span class="n">run_simulation</span><span class="p">(</span><span class="n">TIME_STEP</span><span class="p">,</span> <span class="n">END_TIME</span><span class="p">,</span> <span class="n">lv_speed</span><span class="p">,</span> 
-                                             <span class="n">lv_dot</span><span class="p">,</span> <span class="n">lv_dec</span><span class="p">,</span> <span class="n">limit_lv_speed</span><span class="p">,</span> <span class="n">lv_min_speed</span><span class="p">)</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_stamp</span><span class="p">,</span> <span class="n">speed</span><span class="p">)</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="n">simulate_button</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">on_sim_btn_clicked</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">on_check_change</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">lv_min_speed_check</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
-        <span class="n">lv_min_speed_hbox</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">visibility</span> <span class="o">=</span> <span class="s1">&#39;visible&#39;</span>
-        <span class="n">lv_min_speed_hbox</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="s1">&#39;auto&#39;</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">lv_min_speed_hbox</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">visibility</span> <span class="o">=</span> <span class="s1">&#39;hidden&#39;</span>    
-        <span class="n">lv_min_speed_hbox</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="s1">&#39;0px&#39;</span>
-
-<span class="n">lv_min_speed_check</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">on_check_change</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># run simulations</span>
+            <span class="n">sim_engine</span><span class="o">.</span><span class="n">simulate_driver_models</span><span class="p">()</span>
+            <span class="c1"># plot</span>
+            <span class="n">sim_engine</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Failed with error message: &#39;</span> <span class="o">+</span> <span class="nb">format</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
+    <span class="n">run_button</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Run&#39;</span>
+    <span class="n">run_button</span><span class="o">.</span><span class="n">disabled</span> <span class="o">=</span> <span class="kc">False</span>
         
-<span class="n">display</span><span class="p">(</span><span class="n">lv_speed_hbox</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">lv_dot_hbox</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">lv_dec_hbox</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">lv_min_speed_check</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">lv_min_speed_hbox</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">simulate_button</span><span class="p">)</span>
+
+<span class="n">run_button</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Run&#39;</span><span class="p">)</span>
+<span class="n">run_button</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">on_run_btn_clicked</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">run_button</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
 </pre></div>
 
@@ -13191,6 +13256,440 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
+
+<div class="output_area">
+
+    
+
+
+
+  <div class="output_subarea output_widget_view ">
+    <button class="js-nbinteract-widget">
+      Loading widgets...
+    </button>
+  </div>
+
+</div>
 
 <div class="output_area">
 
@@ -13325,7 +13824,7 @@ div#notebook {
     }
 
     var interact = new window.NbInteract({
-      spec: 'gmarkkula/nbinteracttest/main',
+      spec: 'gmarkkula/RearEndDriverModels/main',
       baseUrl: 'https://mybinder.org',
       provider: 'gh',
     })
