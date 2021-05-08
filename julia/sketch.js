@@ -138,7 +138,10 @@ function draw() {
     textColor.setAlpha(max(0, textAlpha));
     fill(textColor);
     textAlign(CENTER, TOP);
-    text('\n' + INSTRUCTION1 + '\n' + INSTRUCTION2 + '\n\n' + INSTRUCTION3, WIDTH/2, 0)
+    text('\n' + INSTRUCTION1 + '\n' + INSTRUCTION2, WIDTH/2, 0)
+    textColor.setAlpha(max(0, textAlpha) - 180);
+	fill(textColor);
+    text('\n\n\n\n' + INSTRUCTION3, WIDTH/2, 0)
     pop();
   }
   oldMouseX = mouseX;
