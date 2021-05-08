@@ -38,6 +38,7 @@ function setup() {
   createCanvas(400, 400);
   windowResized();
   planewrad = PLANEWRAD0;
+  TEXTSIZE = TEXTSIZE * pixelDensity();
   noStroke();
 }
 
@@ -119,7 +120,7 @@ function draw() {
   // plot cursor position
   push();
   fill("red");
-  circle(mouseX, mouseY, 2);
+  circle(mouseX, mouseY, 2 * pixelDensity());
   pop();
   // if zoomed out and no mouse movement, display instructions
   if (planewrad == PLANEWRAD0 && oldMouseX == mouseX && oldMouseY == mouseY) {
