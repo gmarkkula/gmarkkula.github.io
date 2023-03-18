@@ -6,10 +6,38 @@
     <description>Gustav Markkula&#39;s online resources (code)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jun 2022 00:00:00 +0000</lastBuildDate>
     
     <atom:link href="https://gmarkkula.github.io/tags/code/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A framework for modelling road user interactions</title>
+      <link>https://gmarkkula.github.io/posts/2022-commotions-framework/</link>
+      <pubDate>Wed, 08 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2022-commotions-framework/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://github.com/gmarkkula/COMMOTIONSFramework&#34;&gt;https://github.com/gmarkkula/COMMOTIONSFramework&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A Python 3 implementation of a modular framework for modeling road user interactions, developed in the EPSRC-funded project &lt;a href=&#34;https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/S005056/1&#34;&gt;COMMOTIONS&lt;/a&gt;. The repository contains some base modules, an implementation of the framework for &amp;ldquo;straight crossing paths&amp;rdquo; scenarios, and a number of tests of specific model variants in driver-pedestrian interaction scenarios, as described in (&lt;a href=&#34;https://doi.org/10.1371/journal.pcbi.1009096&#34;&gt;Markkula et al., 2022&lt;/a&gt;). See the repository README for further guidance.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markkula, G., Srinivasan, A. R., Billington, J., Leonetti, M., Kalantari, A. H., Yang, Y., Lee, Y.-M, Madigan, R., &amp;amp; Merat, N. (2022). Explaining human interactions on the road requires large-scale integration of psychological theory. &lt;a href=&#34;https://psyarxiv.com/hdxbs/&#34;&gt;https://psyarxiv.com/hdxbs/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An accumulator model of detection of visually looming collision threats</title>
+      <link>https://gmarkkula.github.io/posts/2021-looming-detection-model/</link>
+      <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2021-looming-detection-model/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://github.com/gmarkkula/LoomingDetectionStudy&#34;&gt;https://github.com/gmarkkula/LoomingDetectionStudy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MATLAB implementations of the various accumulator (and threshold) models of visual looming detection described in (&lt;a href=&#34;https://doi.org/10.1371/journal.pcbi.1009096&#34;&gt;Markkula et al., 2021&lt;/a&gt;). The code can be found in the &lt;code&gt;analysis&lt;/code&gt; folder in the Github repository, which also includes code for non-model analyses of the dataset used in the paper (as described &lt;a href=&#34;https://gmarkkula.github.io/posts/2021-looming-detection-data/&#34;&gt;here&lt;/a&gt;). The model implementations can be found in the &lt;code&gt;SimulateOneTrial_AccumulatorModel.m&lt;/code&gt; and &lt;code&gt;SimulateOneTrial_ThresholdModel.m&lt;/code&gt; functions, and an example of use of these functions can be found in &lt;code&gt;do_19_model_MLEModelSimulationsForFigures.m&lt;/code&gt; which makes use of the &lt;code&gt;SimulateDataSetFromModel.m&lt;/code&gt; function, which in turn calls the &lt;code&gt;SimulateOneTrial_*.m&lt;/code&gt; functions.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markkula, G., Uludağ, Z., Wilkie, R. M., &amp;amp; Billington, J. (2021). Accumulation of continuously time-varying sensory evidence constrains neural and behavioral responses in human collision threat detection. PLoS Computational Biology, 17(7), e1009096. &lt;a href=&#34;https://doi.org/10.1371/journal.pcbi.1009096&#34;&gt;https://doi.org/10.1371/journal.pcbi.1009096&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
     
     <item>
       <title>A looming accumulation intermittent control braking model</title>
@@ -18,7 +46,7 @@
       
       <guid>https://gmarkkula.github.io/posts/2020-hfes2014-model/</guid>
       <description>&lt;p&gt;Link: &lt;a href=&#34;https://github.com/gmarkkula/HFES2014ModelsAndFigs&#34;&gt;https://github.com/gmarkkula/HFES2014ModelsAndFigs&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A MATLAB implementation of the looming accumulation intermittent braking control model described in (&lt;a href=&#34;https://doi.org/10.1177/1541931214581185&#34;&gt;Markkula, 2014&lt;/a&gt;). This implementation is very similar to what has later been presented in more complete detail in (&lt;a href=&#34;https://doi.org/10.1177/1541931213601565&#34;&gt;Svärd et al., 2017&lt;/a&gt;) and as a more task-general model of sustained intermittent control in (&lt;a href=&#34;https://doi.org/10.1007/s00422-017-0743-9&#34;&gt;Markkula et al., 2018&lt;/a&gt;; code linked &lt;a href=&#34;https://gmarkkula.github.io/posts/2018-biolcyb-model/&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;A MATLAB implementation of the looming accumulation intermittent braking control model described in (&lt;a href=&#34;https://doi.org/10.1177/1541931214581185&#34;&gt;Markkula, 2014&lt;/a&gt;). This implementation is very similar to what has later been presented in more complete detail in (&lt;a href=&#34;https://doi.org/10.1177/1541931213601565&#34;&gt;Svärd et al., 2017&lt;/a&gt;; &lt;a href=&#34;https://doi.org/10.1016/j.aap.2021.106433&#34;&gt;Svärd et al., 2021&lt;/a&gt;) and as a more task-general model of sustained intermittent control in (&lt;a href=&#34;https://doi.org/10.1007/s00422-017-0743-9&#34;&gt;Markkula et al., 2018&lt;/a&gt;; code linked &lt;a href=&#34;https://gmarkkula.github.io/posts/2018-biolcyb-model/&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Markkula, G. (2014). Modeling driver control behavior in both routine and near-accident driving. Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 58(1), 879–883. &lt;a href=&#34;https://doi.org/10.1177/1541931214581185&#34;&gt;https://doi.org/10.1177/1541931214581185&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -27,6 +55,9 @@
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Svärd, M., Markkula, G., Engström, J., Granum, F., &amp;amp; Bärgman, J. (2017). A quantitative driver model of pre-crash brake onset and control. Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 61, 339–343. &lt;a href=&#34;https://doi.org/10.1177/1541931213601565&#34;&gt;https://doi.org/10.1177/1541931213601565&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Svärd, M., Markkula, G., Bärgman, J., &amp;amp; Victor, T. (2021). Computational modeling of driver pre-crash brake response, with and without off-road glances: Parameterization using real-world crashes and near-crashes. Accident Analysis &amp;amp; Prevention, 163, 106433. &lt;a href=&#34;https://doi.org/10.1016/j.aap.2021.106433&#34;&gt;https://doi.org/10.1016/j.aap.2021.106433&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
     </item>
