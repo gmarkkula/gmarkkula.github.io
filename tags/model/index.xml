@@ -6,10 +6,24 @@
     <description>Gustav Markkula&#39;s online resources (model)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0000</lastBuildDate>
     
     <atom:link href="https://gmarkkula.github.io/tags/model/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>An accumulator model of detection of visually looming collision threats</title>
+      <link>https://gmarkkula.github.io/posts/2021-looming-detection-model/</link>
+      <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2021-looming-detection-model/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://github.com/gmarkkula/LoomingDetectionStudy&#34;&gt;https://github.com/gmarkkula/LoomingDetectionStudy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MATLAB implementations of the various taccumulator (and threshold) models of visual looming detection described in (&lt;a href=&#34;https://doi.org/10.1371/journal.pcbi.1009096&#34;&gt;Markkula et al., 2021&lt;/a&gt;). The code can be found in the &lt;code&gt;analysis&lt;/code&gt; folder in the Github Github repository, which also includes code for non-model analyses of the dataset used in the paper (as described &lt;a href=&#34;https://gmarkkula.github.io/posts/2021-looming-detection-data/&#34;&gt;here&lt;/a&gt;). The model implementation can be found in the &lt;code&gt;SimulateOneTrial_AccumulatorModel.m&lt;/code&gt; and &lt;code&gt;SimulateOneTrial_ThresholdModel.m&lt;/code&gt; functions, and an example of use of these functions can be found in &lt;code&gt;do_19_model_MLEModelSimulationsForFigures.m&lt;/code&gt; which makes use of the &lt;code&gt;SimulateDataSetFromModel.m&lt;/code&gt; function, which in turn calls the &lt;code&gt;SimulateOneTrial_*.m&lt;/code&gt; functions.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markkula, G., Uludağ, Z., Wilkie, R. M., &amp;amp; Billington, J. (2021). Accumulation of continuously time-varying sensory evidence constrains neural and behavioral responses in human collision threat detection. PLoS Computational Biology, 17(7), e1009096. &lt;a href=&#34;https://doi.org/10.1371/journal.pcbi.1009096&#34;&gt;https://doi.org/10.1371/journal.pcbi.1009096&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
     
     <item>
       <title>A looming accumulation intermittent control braking model</title>

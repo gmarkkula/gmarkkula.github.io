@@ -8,10 +8,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer-when-downgrade">
 
-<title>braking - Gustav Markkula&#39;s online resources</title>
+<title>looming detection - Gustav Markkula&#39;s online resources</title>
 <meta name="description" content="Anubis is a simple minimalist theme for Hugo blog engine.">
 
-<link rel="alternate" type="application/rss+xml" href="https://gmarkkula.github.io/tags/braking/index.xml" title="Gustav Markkula's online resources" />
+<link rel="alternate" type="application/rss+xml" href="https://gmarkkula.github.io/tags/looming-detection/index.xml" title="Gustav Markkula's online resources" />
 <link rel="icon" type="image/x-icon" href="https://gmarkkula.github.io/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="https://gmarkkula.github.io/favicon.png">
 
@@ -19,14 +19,14 @@
 
 
 
-<meta property="og:title" content="braking" />
+<meta property="og:title" content="looming detection" />
 <meta property="og:description" content="Anubis is a simple minimalist theme for Hugo blog engine." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://gmarkkula.github.io/tags/braking/" />
-<meta property="og:updated_time" content="2020-07-11T00:00:00+00:00" />
+<meta property="og:url" content="https://gmarkkula.github.io/tags/looming-detection/" />
+<meta property="og:updated_time" content="2021-06-03T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="braking"/>
+<meta name="twitter:title" content="looming detection"/>
 <meta name="twitter:description" content="Anubis is a simple minimalist theme for Hugo blog engine."/>
 
 
@@ -57,20 +57,19 @@
         <main id="main" tabindex="-1"> 
             
 
-    <h1>Tag: braking</h1>
+    <h1>Tag: looming detection</h1>
     <div class="post-info">
         <a href="https://gmarkkula.github.io/tags/">To all tags</a>
     </div>
     
         <article class="post-list">
     <header>
-        <h1 class="post-title"><a href="/posts/2020-hfes2014-model/">A looming accumulation intermittent control braking model</a></h1>
+        <h1 class="post-title"><a href="/posts/2021-looming-detection-model/">An accumulator model of detection of visually looming collision threats</a></h1>
     </header>
 
    <div class="content post-summary">
-        Link: https://github.com/gmarkkula/HFES2014ModelsAndFigs
-A MATLAB implementation of the looming accumulation intermittent braking control model described in (Markkula, 2014). This implementation is very similar to what has later been presented in more complete detail in (Svärd et al., 2017) and as a more task-general model of sustained intermittent control in (Markkula et al., 2018; code linked here).
- Markkula, G. (2014). Modeling driver control behavior in both routine and near-accident driving. Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 58(1), 879–883.
+        Link: https://github.com/gmarkkula/LoomingDetectionStudy
+MATLAB implementations of the various taccumulator (and threshold) models of visual looming detection described in (Markkula et al., 2021). The code can be found in the analysis folder in the Github Github repository, which also includes code for non-model analyses of the dataset used in the paper (as described here). The model implementation can be found in the SimulateOneTrial_AccumulatorModel.m and SimulateOneTrial_ThresholdModel.m functions, and an example of use of these functions can be found in do_19_model_MLEModelSimulationsForFigures.
     </div>
  
     
@@ -79,7 +78,7 @@ A MATLAB implementation of the looming accumulation intermittent braking control
 
 <div class="post-info">
     
-        <div class="post-date">2020 Jul</div>
+        <div class="post-date">2021 Jun</div>
     
     <div class="post-taxonomies">
         
@@ -88,9 +87,7 @@ A MATLAB implementation of the looming accumulation intermittent braking control
                     
                         <li><a href="https://gmarkkula.github.io/tags/model">#model</a></li>
                     
-                        <li><a href="https://gmarkkula.github.io/tags/code">#code</a></li>
-                    
-                        <li><a href="https://gmarkkula.github.io/tags/braking">#braking</a></li>
+                        <li><a href="https://gmarkkula.github.io/tags/looming-detection">#looming detection</a></li>
                     
                 </ul>
         
@@ -101,13 +98,12 @@ A MATLAB implementation of the looming accumulation intermittent braking control
     
         <article class="post-list">
     <header>
-        <h1 class="post-title"><a href="/posts/2019-brake-model-fitting/">Code for fitting a visual looming accumulation model of brake onset timing</a></h1>
+        <h1 class="post-title"><a href="/posts/2021-looming-detection-data/">Dataset: Limits of human detection of visually looming collision threats</a></h1>
     </header>
 
    <div class="content post-summary">
-        Link: https://doi.org/10.17605/OSF.IO/647SY
-MATLAB implementation of a brake response time model based on accumulation of visual looming information, as initially proposed in (Markkula, 2014). The code also shows how to run a simple grid search to perform a maximum likelihood fitting of the model to observed brake response data, as done for example in (Engström et al, 2018; Xue et al., 2018; Piccinini et al., 2019).
- Engström, J., Markkula, G., Xue, Q.
+        Link: https://osf.io/ku3h4
+Data from the experiment described in (Markkula et al., 2021), measuring the human detection limits for visually looming (optically expanding) collision threats, as a function of collision threat kinematics. Participants watched a visual representation of the back of a car on a computer screen, and were instructed to respond with a button press as soon as they saw the car &ldquo;coming closer&rdquo;, i.e., growing on the screen. The dataset includes both behavioural responses (the button presses) as well as concurrent 1024 Hz EEG data recorded using a 64 electrode 10-20 international cap BioSemi system.
     </div>
  
     
@@ -116,20 +112,16 @@ MATLAB implementation of a brake response time model based on accumulation of vi
 
 <div class="post-info">
     
-        <div class="post-date">2019 Mar</div>
+        <div class="post-date">2021 Jun</div>
     
     <div class="post-taxonomies">
         
             
                 <ul class="post-tags">
                     
-                        <li><a href="https://gmarkkula.github.io/tags/model">#model</a></li>
+                        <li><a href="https://gmarkkula.github.io/tags/data">#data</a></li>
                     
-                        <li><a href="https://gmarkkula.github.io/tags/code">#code</a></li>
-                    
-                        <li><a href="https://gmarkkula.github.io/tags/tool">#tool</a></li>
-                    
-                        <li><a href="https://gmarkkula.github.io/tags/braking">#braking</a></li>
+                        <li><a href="https://gmarkkula.github.io/tags/looming-detection">#looming detection</a></li>
                     
                 </ul>
         
