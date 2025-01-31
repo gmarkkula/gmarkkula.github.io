@@ -6,10 +6,58 @@
     <description>Gustav Markkula&#39;s online resources (Posts)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 29 Nov 2024 00:00:00 +0000</lastBuildDate>
     
     <atom:link href="https://gmarkkula.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dataset: Trajectories of interacting drivers and pedestrians</title>
+      <link>https://gmarkkula.github.io/posts/2024-viscando-data/</link>
+      <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2024-viscando-data/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/ZBFXU&#34;&gt;https://doi.org/10.17605/OSF.IO/ZBFXU&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Data from the real-world data collection described in (&lt;a href=&#34;https://doi.org/10.31234/osf.io/gk9af&#34;&gt;Kalantari et al., 2025&lt;/a&gt;), using a setup of two stereo camera sensors to record road user trajectories at two locations in Leeds, UK, with frequent driver-pedestrian interactions, one week per location.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Kalantari, A. H., Lin, Y. S., Mohammadi, A., Merat, N., &amp;amp; Markkula, G. (2025). Testing the validity of multi-participant distributed simulation for understanding and modeling road user interaction. PsyArXiv preprint. &lt;a href=&#34;https://doi.org/10.31234/osf.io/gk9af&#34;&gt;https://doi.org/10.31234/osf.io/gk9af&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Dataset: EEG study on pedestrian road-crossing decisions</title>
+      <link>https://gmarkkula.github.io/posts/2023-ped-xing-data/</link>
+      <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2023-ped-xing-data/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://zenodo.org/records/8321136&#34;&gt;https://zenodo.org/records/8321136&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Data from the experiment described in (&lt;a href=&#34;https://doi.org/10.31219/osf.io/ebwgj&#34;&gt;Ma et al., 2024&lt;/a&gt;) and (&lt;a href=&#34;https://doi.org/10.31234/osf.io/h5qwa&#34;&gt;Lin et al., 2024&lt;/a&gt;), on pedestrian road-crossing decisions in a controlled environment. Participants were seated in front of a computer screen, with each trial showing an approaching car at one of four times to arrival, and the participants responded with button presses to indicate when they wanted to initiate road-crossing. Both behavioural data (the button press responses) and 64-channel EEG was recorded.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ma, S., Yan, X., Billington, J., Leonetti, M., Merat, N., &amp;amp; Markkula, G. Improving models of pedestrian crossing behavior using neural signatures of decision-making. OSF preprint. &lt;a href=&#34;https://doi.org/10.31219/osf.io/ebwgj&#34;&gt;https://doi.org/10.31219/osf.io/ebwgj&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Lin, Y. S., Billington, J., Srinivasan, A. R., Leonetti, M., &amp;amp; Markkula, G. (2024). Deciphering the Cognitive Complexity of Road Crossing Decisions: A Novel Model Integrating Time-Varying Drift Rates, Signal Suppression, and Utility Maximization. PsyArXiv preprint. &lt;a href=&#34;https://doi.org/10.31234/osf.io/h5qwa&#34;&gt;https://doi.org/10.31234/osf.io/h5qwa&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Dataset: Driving simulator study on urban interactions</title>
+      <link>https://gmarkkula.github.io/posts/2023-urban-interactions-data/</link>
+      <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2023-urban-interactions-data/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/EAZG5&#34;&gt;https://doi.org/10.17605/OSF.IO/EAZG5&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Data from the experiment described in (&lt;a href=&#34;https://doi.org/10.1109/ITSC57777.2023.10421837&#34;&gt;Schumann et al., 2023&lt;/a&gt;) and (&lt;a href=&#34;https://doi.org/10.48550/arXiv.2305.11909&#34;&gt;Srinivasan et al., 2024&lt;/a&gt;), where participants drove the University of Leeds moving base driving simulator in a simulated urban environment, including both non-critical and safety-critical interactions with other, computer-controlled cars.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Schumann, J. F., Srinivasan, A. R., Kober, J., Markkula, G., &amp;amp; Zgonnikov, A. (2023). Using models based on cognitive theory to predict human behavior in traffic: A case study. 2023 IEEE 26th International Conference on Intelligent Transportation Systems (ITSC) (pp. 5870-5875). &lt;a href=&#34;https://doi.org/10.1109/ITSC57777.2023.10421837&#34;&gt;https://doi.org/10.1109/ITSC57777.2023.10421837&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Srinivasan, A. R., Schumann, J., Wang, Y., Lin, Y. S., Daly, M., Solernou, A., Zgonnikov, A., Leonetti, M., Billington, J., &amp;amp; Markkula, G. (2023). The COMMOTIONS Urban Interactions Driving Simulator Study Dataset. arXiv preprint. &lt;a href=&#34;https://doi.org/10.48550/arXiv.2305.11909&#34;&gt;https://doi.org/10.48550/arXiv.2305.11909&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
     
     <item>
       <title>A framework for modelling road user interactions</title>
@@ -18,9 +66,9 @@
       
       <guid>https://gmarkkula.github.io/posts/2022-commotions-framework/</guid>
       <description>&lt;p&gt;Link: &lt;a href=&#34;https://github.com/gmarkkula/COMMOTIONSFramework&#34;&gt;https://github.com/gmarkkula/COMMOTIONSFramework&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A Python 3 implementation of a modular framework for modeling road user interactions, developed in the EPSRC-funded project &lt;a href=&#34;https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/S005056/1&#34;&gt;COMMOTIONS&lt;/a&gt;. The repository contains some base modules, an implementation of the framework for &amp;ldquo;straight crossing paths&amp;rdquo; scenarios, and a number of tests of specific model variants in driver-pedestrian interaction scenarios, as described in (&lt;a href=&#34;https://doi.org/10.1371/journal.pcbi.1009096&#34;&gt;Markkula et al., 2022&lt;/a&gt;). See the repository README for further guidance.&lt;/p&gt;
+&lt;p&gt;A Python implementation of a modular framework for modeling road user interactions, developed in the EPSRC-funded project &lt;a href=&#34;https://gow.epsrc.ukri.org/NGBOViewGrant.aspx?GrantRef=EP/S005056/1&#34;&gt;COMMOTIONS&lt;/a&gt;. The repository contains some base modules, an implementation of the framework for &amp;ldquo;straight crossing paths&amp;rdquo; scenarios, and a number of tests of specific model variants in driver-pedestrian interaction scenarios, as described in (&lt;a href=&#34;https://doi.org/10.1093/pnasnexus/pgad163&#34;&gt;Markkula et al., 2023&lt;/a&gt;). See the repository README for further guidance.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Markkula, G., Srinivasan, A. R., Billington, J., Leonetti, M., Kalantari, A. H., Yang, Y., Lee, Y.-M, Madigan, R., &amp;amp; Merat, N. (2022). Explaining human interactions on the road requires large-scale integration of psychological theory. &lt;a href=&#34;https://psyarxiv.com/hdxbs/&#34;&gt;https://psyarxiv.com/hdxbs/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Markkula, G., Lin, Y. S., Srinivasan, A. R., Billington, J., Leonetti, M., Kalantari, A. H., &amp;hellip; &amp;amp; Merat, N. (2023). Explaining human interactions on the road by large-scale integration of computational psychological theory. PNAS nexus, 2(6), pgad163. &lt;a href=&#34;https://doi.org/10.1093/pnasnexus/pgad163&#34;&gt;https://doi.org/10.1093/pnasnexus/pgad163&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
     </item>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>near-crash on Gustav Markkula&#39;s online resources</title>
+    <link>https://gmarkkula.github.io/tags/near-crash/</link>
+    <description>Gustav Markkula&#39;s online resources (near-crash)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 May 2023 00:00:00 +0000</lastBuildDate>
+    
+    <atom:link href="https://gmarkkula.github.io/tags/near-crash/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dataset: Driving simulator study on urban interactions</title>
+      <link>https://gmarkkula.github.io/posts/2023-urban-interactions-data/</link>
+      <pubDate>Thu, 18 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2023-urban-interactions-data/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/EAZG5&#34;&gt;https://doi.org/10.17605/OSF.IO/EAZG5&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Data from the experiment described in (&lt;a href=&#34;https://doi.org/10.1109/ITSC57777.2023.10421837&#34;&gt;Schumann et al., 2023&lt;/a&gt;) and (&lt;a href=&#34;https://doi.org/10.48550/arXiv.2305.11909&#34;&gt;Srinivasan et al., 2024&lt;/a&gt;), where participants drove the University of Leeds moving base driving simulator in a simulated urban environment, including both non-critical and safety-critical interactions with other, computer-controlled cars.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Schumann, J. F., Srinivasan, A. R., Kober, J., Markkula, G., &amp;amp; Zgonnikov, A. (2023). Using models based on cognitive theory to predict human behavior in traffic: A case study. 2023 IEEE 26th International Conference on Intelligent Transportation Systems (ITSC) (pp. 5870-5875). &lt;a href=&#34;https://doi.org/10.1109/ITSC57777.2023.10421837&#34;&gt;https://doi.org/10.1109/ITSC57777.2023.10421837&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Srinivasan, A. R., Schumann, J., Wang, Y., Lin, Y. S., Daly, M., Solernou, A., Zgonnikov, A., Leonetti, M., Billington, J., &amp;amp; Markkula, G. (2023). The COMMOTIONS Urban Interactions Driving Simulator Study Dataset. arXiv preprint. &lt;a href=&#34;https://doi.org/10.48550/arXiv.2305.11909&#34;&gt;https://doi.org/10.48550/arXiv.2305.11909&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>A looming accumulation intermittent control braking model</title>
+      <link>https://gmarkkula.github.io/posts/2020-hfes2014-model/</link>
+      <pubDate>Sat, 11 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2020-hfes2014-model/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://github.com/gmarkkula/HFES2014ModelsAndFigs&#34;&gt;https://github.com/gmarkkula/HFES2014ModelsAndFigs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A MATLAB implementation of the looming accumulation intermittent braking control model described in (&lt;a href=&#34;https://doi.org/10.1177/1541931214581185&#34;&gt;Markkula, 2014&lt;/a&gt;). This implementation is very similar to what has later been presented in more complete detail in (&lt;a href=&#34;https://doi.org/10.1177/1541931213601565&#34;&gt;Svärd et al., 2017&lt;/a&gt;; &lt;a href=&#34;https://doi.org/10.1016/j.aap.2021.106433&#34;&gt;Svärd et al., 2021&lt;/a&gt;) and as a more task-general model of sustained intermittent control in (&lt;a href=&#34;https://doi.org/10.1007/s00422-017-0743-9&#34;&gt;Markkula et al., 2018&lt;/a&gt;; code linked &lt;a href=&#34;https://gmarkkula.github.io/posts/2018-biolcyb-model/&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markkula, G. (2014). Modeling driver control behavior in both routine and near-accident driving. Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 58(1), 879–883. &lt;a href=&#34;https://doi.org/10.1177/1541931214581185&#34;&gt;https://doi.org/10.1177/1541931214581185&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markkula, G., Boer, E., Romano, R., &amp;amp; Merat, N. (2018). Sustained sensorimotor control as intermittent decisions about prediction errors: Computational framework and application to ground vehicle steering. Biological Cybernetics, 112(3), 181–207. &lt;a href=&#34;https://doi.org/10.1007/s00422-017-0743-9&#34;&gt;https://doi.org/10.1007/s00422-017-0743-9&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Svärd, M., Markkula, G., Engström, J., Granum, F., &amp;amp; Bärgman, J. (2017). A quantitative driver model of pre-crash brake onset and control. Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 61, 339–343. &lt;a href=&#34;https://doi.org/10.1177/1541931213601565&#34;&gt;https://doi.org/10.1177/1541931213601565&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Svärd, M., Markkula, G., Bärgman, J., &amp;amp; Victor, T. (2021). Computational modeling of driver pre-crash brake response, with and without off-road glances: Parameterization using real-world crashes and near-crashes. Accident Analysis &amp;amp; Prevention, 163, 106433. &lt;a href=&#34;https://doi.org/10.1016/j.aap.2021.106433&#34;&gt;https://doi.org/10.1016/j.aap.2021.106433&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Code for fitting a visual looming accumulation model of brake onset timing</title>
+      <link>https://gmarkkula.github.io/posts/2019-brake-model-fitting/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2019-brake-model-fitting/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://doi.org/10.17605/OSF.IO/647SY&#34;&gt;https://doi.org/10.17605/OSF.IO/647SY&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;MATLAB implementation of a brake response time model based on accumulation of visual looming information, as initially proposed in (&lt;a href=&#34;https://doi.org/10.1177/1541931214581185&#34;&gt;Markkula, 2014&lt;/a&gt;). The code also shows how to run a simple grid search to perform a maximum likelihood fitting of the model to observed brake response data, as done for example in (&lt;a href=&#34;https://doi.org/10.1049/iet-its.2017.0233&#34;&gt;Engström et al, 2018&lt;/a&gt;; &lt;a href=&#34;https://doi.org/10.1016/j.aap.2018.06.006&#34;&gt;Xue et al., 2018&lt;/a&gt;; &lt;a href=&#34;https://doi.org/10.1177/0018720819875347&#34;&gt;Piccinini et al., 2019&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Engström, J., Markkula, G., Xue, Q., &amp;amp; Merat, N. (2018). Simulating the effect of cognitive load on braking responses in lead vehicle braking scenarios. &lt;em&gt;IET Intelligent Transport Systems&lt;/em&gt;, 12(6), 427–433. &lt;a href=&#34;https://doi.org/10.1049/iet-its.2017.0233&#34;&gt;https://doi.org/10.1049/iet-its.2017.0233&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markkula, G. (2014). Modeling driver control behavior in both routine and near-accident driving. &lt;em&gt;P&lt;/em&gt;roceedings of the Human Factors and Ergonomics Society Annual Meeting*, 58(1), 879–883. &lt;a href=&#34;https://doi.org/10.1177/1541931214581185&#34;&gt;https://doi.org/10.1177/1541931214581185&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Piccinini, G. B., Lehtonen, E., Forcolin, F., Engström, J., Albers, D., Markkula, G., Lodin, J., &amp;amp; Sandin, J. (2019). How do drivers respond to silent automation failures? Driving simulator study and comparison of computational driver 2 braking models 3. &lt;em&gt;Human Factors&lt;/em&gt;. &lt;a href=&#34;https://doi.org/10.1177/0018720819875347&#34;&gt;https://doi.org/10.1177/0018720819875347&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Xue, Q., Markkula, G., Yan, X., &amp;amp; Merat, N. (2018). Using perceptual cues for brake response to a lead vehicle: Comparing threshold and accumulator models of visual looming. &lt;em&gt;Accident Analysis &amp;amp; Prevention&lt;/em&gt;, 118, 114–124. &lt;a href=&#34;https://doi.org/10.1016/j.aap.2018.06.006&#34;&gt;https://doi.org/10.1016/j.aap.2018.06.006&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
