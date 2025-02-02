@@ -6,10 +6,22 @@
     <description>Gustav Markkula&#39;s online resources (Posts)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Feb 2025 00:00:00 +0000</lastBuildDate>
     
     <atom:link href="https://gmarkkula.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to write a paper, the easy way</title>
+      <link>https://gmarkkula.github.io/posts/2025-writing-recipe/</link>
+      <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://gmarkkula.github.io/posts/2025-writing-recipe/</guid>
+      <description>&lt;p&gt;Link: &lt;a href=&#34;https://gmarkkula.github.io/writing-recipe/&#34;&gt;https://gmarkkula.github.io/writing-recipe/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;My take on how to get from a blank computer screen to a submitted academic paper, with as little pain as possible along the way.
+&lt;a href=&#34;https://gmarkkula.github.io/writing-recipe&#34;&gt;&lt;img src=&#34;https://gmarkkula.github.io/8steprecipe.gif&#34; alt=&#34;test&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Dataset: Trajectories of interacting drivers and pedestrians</title>
