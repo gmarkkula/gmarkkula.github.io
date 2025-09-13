@@ -4,12 +4,15 @@
 let t = 0;
 let paused = false;
 let scene = 0;
-const maxScene = 5;
+const maxScene = 6;
 const timeGraceForPrevScene = 2;
 let hasUpdatedScene = false;
 // screen size
-const referenceScreenWidth = 1240;
-let screenScaleFactor;const n_pts = 1000, maxPtDist = 200;
+const referenceScreenWidth = 1240, axisLabelRefFontSize = 32;
+let screenScaleFactor;
+// optic flow points
+let pts = [];
+const n_pts = 1000, maxPtDist = 200;
 // perspective
 const eyeHeight = 1.5, horizonPitch = eyeHeight / (2 * maxPtDist);
 const fovYaw = 35 * 3.14159 / 180;
@@ -20,8 +23,6 @@ const acc = 100, maxV = 50;
 const steerDeadZone = 0.1, maxCurvature = 0.02; // YawRate = 30 * 3.14159 / 180;
 let pos;
 let v = 0, yaw = 0;
-// optic flow points
-let pts = [];
 // road
 let showRoad = false;
 const roadHalfWidth = 3.5;
@@ -47,7 +48,7 @@ let obstaclePlotWidth, relativeOpticalExpansion;
 let showEvidenceAccPlots = false;
 let evidencePlot;
 let nEvidenceTraces = 50;
-let loomAccK = 0.2, loomAccM = 0.05, loomAccSigma = 0.05;
+let loomAccK = 0.08, loomAccM = 0.01, loomAccSigma = 0.05;
 
 
 
@@ -95,9 +96,11 @@ class Box {
 }
 
 class Plot {
-  constructor(relScrBox, dataBox, relStrokeWeight=2, relArrowHeadSize=8) {
+  constructor(relScrBox, dataBox, xLabel='', yLabel='', relStrokeWeight=2, relArrowHeadSize=8) {
     this.relScrBox = relScrBox;
     this.dataBox = dataBox;
+    this.xLabel = xLabel;
+    this.yLabel = yLabel;
     this.relStrokeWeight = relStrokeWeight;
     this.relArrowHeadSize = relArrowHeadSize;
   }
@@ -112,12 +115,19 @@ class Plot {
     let leftTop = this.getScreenPos(this.dataBox.minX, this.dataBox.maxY);
     drawArrow(leftBottom.x, leftBottom.y, rightBottom.x, rightBottom.y, this.relStrokeWeight, this.relArrowHeadSize);
     drawArrow(leftBottom.x, leftBottom.y, leftTop.x, leftTop.y, this.relStrokeWeight, this.relArrowHeadSize);
+    push();
+    strokeWeight(0);
+    textAlign(LEFT);
+    text(" " + this.xLabel, rightBottom.x, rightBottom.y)
+    textAlign(RIGHT);
+    text(this.yLabel + " ", leftTop.x, leftTop.y)
+    pop();
   }
 }
 
 class TimeSeriesPlot extends Plot {
-  constructor(relScrBox, dataBox) {
-    super(relScrBox, dataBox);
+  constructor(relScrBox, dataBox, xLabel='', yLabel='') {
+    super(relScrBox, dataBox, xLabel, yLabel);
     this.timeSeriesList = [];
   }
   addTimeSeries(timeSeries) {
@@ -144,8 +154,8 @@ class TimeSeriesPlot extends Plot {
 }
 
 class Histogram extends Plot {
-  constructor(relScrBox, dataBox, binWidth) {
-    super(relScrBox, dataBox)
+  constructor(relScrBox, dataBox, binWidth, xLabel='', yLabel='') {
+    super(relScrBox, dataBox, xLabel, yLabel)
     this.binWidth = binWidth;
     this.nBins = ceil(dataBox.xRange / binWidth);
     this.binCounts = [];
@@ -193,6 +203,7 @@ function initialiseScene() {
   showRoad = true;
   showNearFarPoints = false;
   showObstacle = false;
+  obstacleDist = 200;
   showLoomingPlot = false;
   showEvidenceAccPlots = false;
   switch(scene){
@@ -207,6 +218,7 @@ function initialiseScene() {
       showNearFarPoints = true;
       break;
     case 3:
+      steeringEnabled = false;
       showObstacle = true;
       break;
     case 4:
@@ -219,6 +231,14 @@ function initialiseScene() {
       v = maxV;
       steeringEnabled = false;
       showObstacle = true;
+      showLoomingPlot = true;
+      showEvidenceAccPlots = true;
+      break;
+    case 6:
+      v = maxV;
+      steeringEnabled = false;
+      showObstacle = true;
+      obstacleDist = 50;
       showLoomingPlot = true;
       showEvidenceAccPlots = true;
       break;
@@ -241,13 +261,13 @@ function initialiseScene() {
   obstacleAbsPts.push(createVector(obstacleDist, obstacleHalfWidth * .65, obstacleHeight * .15));
   obstacleAbsPts.push(createVector(obstacleDist, obstacleHalfWidth * .65, 0));
   // initialise time series and plots
-  loomingPlot = new TimeSeriesPlot(new Box(0.05, 0.3, 0.05, 0.25), new Box(0, 5, 0, 5));
+  loomingPlot = new TimeSeriesPlot(new Box(0.05, 0.3, 0.05, 0.25), new Box(0, 4, 0, 5), '𝑡', '𝛽');
   loomingTimeSeries = new TimeSeriesData(maxTime=10);
   loomingPlot.addTimeSeries(loomingTimeSeries);
-  evidencePlot = new TimeSeriesPlot(new Box(0.7, 0.95, 0.3, 0.5), new Box(0, 5, 0, 1))
+  evidencePlot = new TimeSeriesPlot(new Box(0.7, 0.95, 0.25, 0.40), new Box(0, 3, 0, 1), '𝑡', '𝑥')
   for(i = 0; i < nEvidenceTraces; i++) 
     evidencePlot.addTimeSeries(new TimeSeriesData(maxTime=10));
-  rtPlot = new Histogram(new Box(0.7, 0.95, 0.05, 0.25), new Box(0, 5, 0, 20), 0.25)
+  rtPlot = new Histogram(new Box(0.7, 0.95, 0.05, 0.18), new Box(0, 3, 0, 30), 0.25, '𝑡', '#')
   
 }
 
@@ -289,6 +309,7 @@ function windowResized() {
    resizeCanvas(windowWidth, windowHeight);
    setFovPitch();
    screenScaleFactor = width / referenceScreenWidth;
+   textSize(screenScaleFactor * axisLabelRefFontSize);
 }
 
 function keyPressed() {
@@ -425,6 +446,7 @@ function draw() {
     // draw the plot
     strokeWeight(2);
     stroke('black');
+    fill('black')
     loomingPlot.drawAxes()
     loomingPlot.draw();
   }
@@ -451,7 +473,9 @@ function draw() {
     evidencePlot.draw();
     stroke('black');
     evidencePlot.drawAxes();
+    fill('blue');
     rtPlot.draw();
+    fill('black')
     rtPlot.drawAxes();
   }
   // remember that we've completed at least one update
