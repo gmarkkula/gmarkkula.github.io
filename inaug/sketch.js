@@ -48,7 +48,7 @@ let obstaclePlotWidth, relativeOpticalExpansion;
 let showEvidenceAccPlots = false;
 let evidencePlot;
 let nEvidenceTraces = 50;
-let loomAccK = 0.08, loomAccM = 0.01, loomAccSigma = 0.05;
+let loomAccK = 0.08, loomAccM = 0.007, loomAccSigma = 0.05;
 
 
 
@@ -261,13 +261,13 @@ function initialiseScene() {
   obstacleAbsPts.push(createVector(obstacleDist, obstacleHalfWidth * .65, obstacleHeight * .15));
   obstacleAbsPts.push(createVector(obstacleDist, obstacleHalfWidth * .65, 0));
   // initialise time series and plots
-  loomingPlot = new TimeSeriesPlot(new Box(0.05, 0.3, 0.05, 0.25), new Box(0, 4, 0, 5), '𝑡', '𝛽');
+  loomingPlot = new TimeSeriesPlot(new Box(0.05, 0.3, 0.05, 0.25), new Box(0, 4, 0, 5), '𝑡', '𝐿');
   loomingTimeSeries = new TimeSeriesData(maxTime=10);
   loomingPlot.addTimeSeries(loomingTimeSeries);
-  evidencePlot = new TimeSeriesPlot(new Box(0.7, 0.95, 0.25, 0.40), new Box(0, 3, 0, 1), '𝑡', '𝑥')
+  evidencePlot = new TimeSeriesPlot(new Box(0.7, 0.95, 0.25, 0.40), new Box(0, 3, 0, 1.2), '𝑡', '𝐸')
   for(i = 0; i < nEvidenceTraces; i++) 
     evidencePlot.addTimeSeries(new TimeSeriesData(maxTime=10));
-  rtPlot = new Histogram(new Box(0.7, 0.95, 0.05, 0.18), new Box(0, 3, 0, 30), 0.25, '𝑡', '#')
+  rtPlot = new Histogram(new Box(0.7, 0.95, 0.05, 0.18), new Box(0, 3, 0, 30), 0.2, '𝑡', '#')
   
 }
 
@@ -398,7 +398,7 @@ function draw() {
     if (pt.x < 0 | pt.x > width | pt.y < 0 | pt.y > height | relPt.x < 0) 
       pts[i] = getRandomPos(80);
     else
-      strokeWeight(max(1, 150 / relPt.mag()))
+      strokeWeight(max(1, 150 / relPt.mag()) * screenScaleFactor)
       stroke(255, 255, 255, 100);
       point(pt.x, pt.y);
   }
