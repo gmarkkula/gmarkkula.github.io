@@ -431,6 +431,7 @@ function draw() {
     endShape()
     if (stopAtObstacle & pos.x > obstacleDist - obstacleStopDistance) {
       v = 0;
+      paused = true;
     }
   }
   // looming plot
